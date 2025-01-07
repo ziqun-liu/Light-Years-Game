@@ -1,8 +1,12 @@
 #include<iostream>
+#include<memory>
+#include<SFML/Graphics.hpp>
 
-using namespace std;
+#include"framework/Application.h"
 
 int main()
 {
-	cout << "Hello world" << endl;
+	// Allocating on the heap
+	std::unique_ptr<ly::Application> app = std::make_unique<ly::Application>();
+	app->Run();
 }
